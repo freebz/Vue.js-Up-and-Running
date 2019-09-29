@@ -1,0 +1,24 @@
+<!-- Methods -->
+
+<div id="app">
+  <p>Current status: {{ statusFromId(status) }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      status: 2
+    },
+    methods: {
+      statusFromId(id) {
+	const status = ({
+	  0: 'Asleep',
+	  1: 'Eating',
+	  2: 'Learning Vue'
+	})[id];
+
+	return status || 'Unknown status: ' + id;
+      }
+    }
+  });
+</script>

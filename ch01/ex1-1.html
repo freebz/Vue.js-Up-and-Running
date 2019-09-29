@@ -1,0 +1,27 @@
+<ul class="js-items"></ul>
+
+<script>
+  $(function () {
+    $.get('https://exmple.com/items.json')
+     .then(function (data) {
+       var $itemUl = $('.js-items');
+
+       if (!data.items.length) {
+	 var $noItems = $('li');
+	 $noItems.text('Sorry, there are no items.');
+	 $itemsUl.append($noItems);
+       } else {
+	 data.items.forEach(function (item) {
+	   var $newItem = $('li');
+	   $newItem.text(item);
+
+	   if (item.includes('blue')) {
+	     $newItem.addClass('is-blue');
+	   }
+
+	   $itemUl.append($newItem);
+	 });
+       }
+     });
+  });
+</script>

@@ -1,0 +1,16 @@
+<div id="app">
+  <form @keyup="handleKeyup">...</form>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      handleKeyup(e) {
+	if (e.keyCode === 27) {
+	  // do something
+	}
+      }
+    }
+  });
+</script>

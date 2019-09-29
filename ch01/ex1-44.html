@@ -1,0 +1,18 @@
+<!-- Life-Cycle Hooks -->
+
+<Div id="app">
+  <p>Hello world</p>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    mounted() {
+      // Element might not have been added to the DOM yet
+
+      this.$nextTick(() => {
+	// Element has definitely been added to the DOM now
+      });
+    }
+  });
+</script>

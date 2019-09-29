@@ -1,0 +1,18 @@
+<div id="app">
+  <ul>
+    <li v-for="(rent, city) in averageRent">
+      The average rent in {{ city }} is ${{ rent }}</li>
+  </ul>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      averageRent: {
+	london: 1650,
+	paris: 1730,
+	NYC: 3680
+      }
+    }
+  });
+</script>

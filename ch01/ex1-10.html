@@ -1,0 +1,13 @@
+<div id="app">
+  <ul>
+    <li v-for="dog in dogs">{{ dog }}</li>
+  </ul>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      dogs: ['Rex', 'Rover', 'Henrietta', 'Alan']
+    }
+  });
+</script>

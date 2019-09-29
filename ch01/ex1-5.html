@@ -1,0 +1,13 @@
+<div id="app">
+  <p v-if="hours < 12">Good morning!</p>
+  <p v-if="hours >= 12 && hours < 18">Good afternoon!</p>
+  <p v-if="hours >= 18">Good evening!</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      hours: new Date().getHours()
+    }
+  });
+</script>

@@ -1,0 +1,18 @@
+<div id="app">
+  <button v-on:click="increase">Click to increase counter</button>
+  <p>You've clicked the button {{ counter }}</p> times.
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      counter: 0
+    },
+    methods: {
+      increase(e) {
+	this.counter++;
+      }
+    }
+  });
+</script>

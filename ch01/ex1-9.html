@@ -1,0 +1,14 @@
+<div id="app">
+  <div v=show="user">
+    <p>User name: {{ user.name }}</p>
+  </div>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      user: undefined
+    }
+  });
+</script>

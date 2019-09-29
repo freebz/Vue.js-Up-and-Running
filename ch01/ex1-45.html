@@ -1,0 +1,16 @@
+<!-- Custom Directives -->
+
+<p v-blink>This content will blink</p>
+
+
+<script>
+  Vue.directive('blink', {
+    bind(el) {
+      let isVisible = true;
+      setInterval(() => {
+	isVisible = !isVisible;
+	el.style.visibility = isVisible ? 'visible' : 'hidden';
+      }, 1000);
+    }
+  });
+</script>

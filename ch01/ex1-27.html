@@ -1,0 +1,18 @@
+<!-- Computed Properties -->
+
+<div id="app">
+  <p>Sum of numbers: {{ numberTotal }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      numbers: [5, 8, 3]
+    },
+    computed: {
+      numberTotal() {
+	return numbers.reduce((sum, val) => sum + val);
+      }
+    }
+  });
+</script>

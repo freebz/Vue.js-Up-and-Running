@@ -1,0 +1,16 @@
+<div id="app">
+  <p>Product one cost: {{ productOneCost | formatCost('$') }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      productOneCost: 998,
+    },
+    filters: {
+      formatCost(value, symbol) {
+	return symbol + (value / 100).toFixed(2);
+      }
+    }
+  });
+</script>

@@ -1,0 +1,22 @@
+<div id="app">
+  <input type="text" v-model="inputValue">
+
+  <p>Five seconds ago, the input said "{{ oldInputValue }}".</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      inputValue: '',
+      oldInputValue: ''
+    },
+    watch: {
+      inputValue() {
+	const newValue = this.inputValue;
+	setTimeout(() => {
+	  this.oldInputValue = newValue;
+	}, 5000);
+      }
+    }
+  });
+</script>

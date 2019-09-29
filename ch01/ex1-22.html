@@ -1,0 +1,12 @@
+<div id="app">
+  <input type="text" v-bind:value="inputText" value="initial value">
+  <p>inputText: {{ inputText }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      inputText: 'initial value'
+    }
+  });
+</script>

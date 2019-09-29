@@ -1,0 +1,20 @@
+<ul class="js-items">
+  <li v-if="!items.length">Sorry, there are no items.</li>
+  <li v-for="item in items" :class="{ 'is-blue': item.includes('blue') }">
+    {{ item }}</li>
+</ul>
+<script>
+  new Vue({
+    el: '.js-items',
+    data: {
+      items: []
+    },
+    created() {
+      fetch('https://example.com/items.json')
+	.then((res) => res.json())
+	.then((data) => {
+	  this.items = data.items;
+	});
+    }
+  });  
+</script>

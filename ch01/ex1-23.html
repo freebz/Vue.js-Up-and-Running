@@ -1,0 +1,15 @@
+<div id="app">
+  <label><input type="radio" v-model="value" value="one"> One</label>
+  <label><input type="radio" v-model="value" value="two"> Two</label>
+  <label><input type="radio" v-model="value" value="three"> Three</label>
+
+  <p>The value is {{ value }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      value: 'one'
+    }
+  });
+</script>

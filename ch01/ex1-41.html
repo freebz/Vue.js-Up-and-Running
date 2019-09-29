@@ -1,0 +1,18 @@
+<!-- Event Modifiers -->
+
+<a @click.prevent="handleClick">...</a>
+
+
+<button @click.stop="handleClick">...</button>
+
+
+<button @click.once="handleFirstClick">...</button>
+
+
+<div @click.capture="handleCapturedClick">...</div>
+
+
+<div @click.self="handleSelfClick">...</div>
+
+
+<div @click.stop.capture.once></div>

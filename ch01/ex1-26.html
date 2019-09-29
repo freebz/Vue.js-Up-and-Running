@@ -1,0 +1,23 @@
+<!-- this -->
+
+<div id="app">
+  <p>The sum of the positive numbers is {{ getPositiveNumbersSum() }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      numbers: [-5, 0, 2, -1, 1, 0.5]
+    },
+    methods: {
+      getPositiveNumbers() {
+	// Note that we're now using this.numbers
+	// to refer directly to the data object.
+	return this.numbers.filter((number) => number >= 0);
+      },
+      getPositiveNumbersSum() {
+	return this.getPositiveNumbers().reduce((sum, val) => sum + val);
+      }
+    }
+  });
+</script>

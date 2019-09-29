@@ -1,0 +1,20 @@
+<div id="app">
+  <p>Product one cost: ${{ (productOneCost | formatCost }}</p>
+  <p>Product two cost: ${{ (productTwoCost | formatCost }}</p>
+  <p>Product three cost: ${{ (productThreeCost | formatCost }}</p>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      productOneCost: 998,
+      productTwoCost: 2399,
+      productThreeCost: 5300
+    },
+    filters: {
+      formatCost(value) {
+	return '$' + (value / 100).toFixed(2);
+      }
+    }
+  });
+</script>

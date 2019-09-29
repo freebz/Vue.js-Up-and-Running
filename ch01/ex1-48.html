@@ -1,0 +1,16 @@
+<!-- Transitions and Animations
+     CSS Transitions -->
+
+<div id="app">
+  <button @click="divVisible = !divVisible">Toggle visibility</button>
+
+  <div v-if="divVisible">This content is sometimes hidden</div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      divVisible: true
+    }
+  });
+</script>
