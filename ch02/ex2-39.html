@@ -1,0 +1,25 @@
+<div id="app">
+  <counter v-on:count="handleCount"></counter>
+
+  <p>clicks = {{ clicks }}</p>
+</div>
+<script>
+  const Counter = {
+    // component here
+  };
+
+  new Vue({
+    el: '#app',
+    data: {
+      clicks: 0,
+    },
+    methods: {
+      handleCount(clicks) {
+	this.clicks = clicks;
+      }
+    },
+    components: {
+      Counter
+    }
+  });
+</script>

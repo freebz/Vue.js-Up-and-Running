@@ -1,0 +1,12 @@
+<div id="app">
+  <counter ref="counter"></counter>
+</div>
+<script>
+  // Incomplete component for brevity
+  new Vue({
+    el: '#app',
+    mounted() {
+      this.$refs.counter.$on('count', this.handleCount);
+    }
+  });
+</script>

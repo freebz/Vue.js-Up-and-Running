@@ -1,0 +1,9 @@
+<div>
+  <div v-for="post in posts">
+    <h1>{{ post.title }}</h1>
+
+    <slot name="summary" :post="post">
+      <p>{{ post.summary }}</p>
+    </slot>
+  </div>
+</div>

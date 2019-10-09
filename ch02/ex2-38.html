@@ -1,0 +1,20 @@
+<!-- Custom Events -->
+
+<div id="app">
+  <button @click="handleClick">Clicked {{ clicks }} times</button>
+</div>
+
+<script>
+  new Vue({
+    el: '#app',
+    data: () => ({
+      clicks: 0
+    }),
+    methods: {
+      handleClick() {
+	this.clicks++;
+	this.$emit('count', this.clicks);
+      }
+    }
+  });
+</script>

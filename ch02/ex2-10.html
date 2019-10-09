@@ -1,0 +1,16 @@
+<!-- Casing of Props -->
+
+<div id="app">
+  <price-display percentage-discount="20%"></price-display>
+</div>
+<script>
+  Vue.component('price-display', {
+    props: {
+      percentageDiscount: Number
+    }
+  });
+
+  new Vue({
+    el: '#app'
+  });
+</script>

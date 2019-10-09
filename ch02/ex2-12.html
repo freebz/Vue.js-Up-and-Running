@@ -1,0 +1,16 @@
+<div id="app">
+  <display-number v-bind:number="number"></display-number>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      number: 0
+    },
+    created() {
+      setInterval(() => {
+	this.number++;
+      }, 1000);
+    }
+  });
+</script>

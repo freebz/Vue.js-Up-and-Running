@@ -1,0 +1,27 @@
+<!-- Components and v-for -->
+
+<template>
+  <demo-key v-for="(item, i) in items" @click.native="items.splice(i, 1)">
+    {{ item }}
+  </demo-key>
+</template>
+
+<script>
+  const randomColor = () => `hsl(${Math.floor(Math.random() * 360)}, 75%, 85%)`;
+
+  const DemoKey = {
+    template: `<p :style="{ backgroundColor: color }"><slot></slot></p>`,
+    data: () => ({
+      color: randomColor()
+    })
+  };
+
+  export default {
+    data: () => ({
+      items: ['one', 'two', 'three', 'four', 'five']
+    }),
+    components: {
+      DemoKey
+    }
+  };
+</script>

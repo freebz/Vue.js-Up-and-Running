@@ -1,0 +1,7 @@
+<blog-listing :posts="posts">
+  <img
+    slot="summary"
+    slot-scope="post"
+    :src="post.image"
+    :alt="post.summary">
+</blog-listing>

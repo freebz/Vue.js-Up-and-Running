@@ -1,0 +1,21 @@
+<!-- Passing in Data -->
+
+<div id="app">
+  <color-preview color="red"></color-preview>
+  <color-preview color="blue"></color-preview>
+</div>
+<script>
+  Vue.component('color-preview', {
+    template: '<div class="color-preview" :style="style"></div>',
+    props: ['color'],
+    computed: {
+      style() {
+	return { backgroundColor: this.color };
+      }
+    }
+  });
+
+  new Vue({
+    el: '#app'
+  });
+</script>

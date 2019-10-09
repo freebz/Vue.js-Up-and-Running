@@ -1,0 +1,12 @@
+<!-- Named Slots -->
+
+<section class="blog-post">
+  <header>
+    <slot name="header"></slot>
+    <p>Post by {{ author.name }}</p>
+  </header>
+
+  <main>
+    <slot></slot>
+  </main>
+</section>

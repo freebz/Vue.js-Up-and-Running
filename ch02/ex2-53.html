@@ -1,0 +1,15 @@
+<div id="app">
+  <custom-button type="submit">Click me!</custom-button>
+</div>
+<script>
+  const CustomButton = {
+    template: '<button type="button"><slot></slot></button>'
+  };
+
+  new Vue({
+    el: '#app',
+    components: {
+      CustomButton
+    }
+  });
+</script>

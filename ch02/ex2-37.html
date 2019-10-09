@@ -1,0 +1,9 @@
+<!-- Slot scope destructuring -->
+
+<blog-listing :posts="posts">
+  <img
+    slot="summary"
+    slot-scope="{ image, summary }"
+    :src="image"
+    :alt="summary">
+</blog-listing>
