@@ -1,0 +1,20 @@
+<template>
+  <p>The number is <span class="number">{{ number }}</span></p>
+</template>
+
+<script>
+  export default {
+    props: {
+      number: {
+	type: Number,
+	required: true
+      }
+    }
+  };
+</script>
+
+<style>
+  .number {
+    font-weight: bold;
+  }
+</style>

@@ -1,0 +1,20 @@
+<!-- Class Binding -->
+
+<div id="app">
+  <div v-bind:class="[firstClass, secondClass]">
+    ...
+  </div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      firstClass: 'foo'
+    },
+    computed: {
+      secondClass() {
+	return 'bar';
+      }
+    }
+  });
+</script>

@@ -1,0 +1,17 @@
+<div id="app">
+  <div
+      v-for="n in 12"
+      class="color"
+      :style="{ backgroundColor: getColor(n) }">
+  </div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    methods: {
+      getColor(n) {
+	return `hsl(${(n - 1) * 30}, 100%, 75%)`;
+      }
+    }
+  });
+</script>

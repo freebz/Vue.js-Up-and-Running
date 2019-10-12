@@ -1,0 +1,11 @@
+<!-- CSS Modules with vue-loader -->
+
+<template>
+  <p>The number is <span :class="$style.number">{{ number }}</span></p>
+</template>
+
+<style module>
+  .number {
+    font-weight: bold;
+  }
+</style>

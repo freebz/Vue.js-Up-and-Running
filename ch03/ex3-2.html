@@ -1,0 +1,20 @@
+<div id="app">
+  <div v-bind:class="classes"></div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      shouldBeBar: true
+    },
+    computed: {
+      classes() {
+	return {
+	  foo: true,
+	  bar: this.shouldBeBar,
+	  hello: false
+	};
+      }
+    }
+  }); 
+</script>
