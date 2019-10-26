@@ -1,0 +1,37 @@
+<!-- Reacting to Route Updates -->
+
+<template>
+  <div v-if="state === 'loading'">
+    Loading user...
+  </div>
+  <div>
+    <h1>User: {{ userInfo.name }}</h1>
+    ... etc ...
+  </div>
+</template>
+
+<script>
+  export default {
+    data: () => ({
+      state: 'loading',
+      userInfo: undefined
+    }),
+    mounted() {
+      this.init();
+    },
+    beforeRouteUpdate(to, from, next) {
+      this.state = 'loading';
+      this.init();
+      next();
+    },
+    methods: {
+      init() {
+	fetch(`/api/user/${this.$route.params.userId}`)
+	  .then((res) => res.json())
+	  .then((data) => {
+	    this.userInfo = data;
+	  });
+      }
+    }
+  };
+</script>
