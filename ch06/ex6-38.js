@@ -1,0 +1,1 @@
+computed: mapState('messages', ['messages'])

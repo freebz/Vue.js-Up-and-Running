@@ -1,0 +1,3 @@
+methods: mapMutations({
+  addNewMessage: 'addMessage'
+})
