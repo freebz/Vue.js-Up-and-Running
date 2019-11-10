@@ -1,0 +1,15 @@
+/* CSS Modules */
+
+.user {
+  border: 2px #ccc solid;
+  background-color: white;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.bio {
+  font-size: 16px;
+  color: #333;
+}
